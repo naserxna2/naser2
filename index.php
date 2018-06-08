@@ -288,13 +288,8 @@ $d8['video']=$p12.'image/test1.mp4';
 $d8['caption']=$tr1;
 $s4=$url.$s1."/sendVideo";
 $d10=sph($s4,$d8,$s);
-$d121=json_stringify($d10);
 
-$d6='chat_id'.'='.$st1[1].'&'.'text'.'='.$d121;
-$s3=$url.$s1."/sendMessage";
-$f1=t1($s3,$d6);
-file_put_contents('f1.txt',$f1);
-file_put_contents('f3.txt',$d10);
+file_put_contents('http://xna123.000webhostapp.com/f10.txt',$d10);
 }
 }
 
