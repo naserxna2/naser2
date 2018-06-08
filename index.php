@@ -284,12 +284,12 @@ file_put_contents('f1.txt',$f1);
 $p12="https://naserxna2.herokuapp.com/";
 $d8=array();
 $d8['chat_id']=$st1[1];
-$d8['video']=$p12.'image/test1.mp4';
+$d8['video']='@' . realpath('image/test1.mp4');
 $d8['caption']=$tr1;
 $s4=$url.$s1."/sendVideo";
 $d10=sph($s4,$d8,$s);
 
-file_put_contents('http://xna123.000webhostapp.com/f10.txt',$d10);
+//file_put_contents('http://xna123.000webhostapp.com/f10.txt',$d10);
 }
 }
 
