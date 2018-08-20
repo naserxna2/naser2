@@ -219,7 +219,7 @@ else
 {
 $up1=$update['callback_query'];
 $up2=$up1['data'];
-$ur1="https://xna123.000webhostapp.com/index13.php";
+$ur1="http://xna123.000webhostapp.com/index13.php";
 $ur2="?data=".$up2;
 $ur3=$ur1.$ur2;
 $r1=t2($ur3);
