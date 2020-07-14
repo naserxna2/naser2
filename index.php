@@ -217,6 +217,7 @@ file_put_contents('f1.txt',$f1);
 }
 else
 {
+    /*
 $up1=$update['callback_query'];
 $up2=$up1['data'];
 $st1=explode("@",$up2);
@@ -227,8 +228,8 @@ $ur1="http://xna123.000webhostapp.com/index13.php";
 $ur2="?data=".$up2;
 $ur3=$ur1.$ur2;
 $r1=t2($ur3);
+*/
 
-/*
 $up1=$update['callback_query'];
 $up2=$up1['data'];
 $st1=explode("@",$up2);
@@ -293,14 +294,22 @@ $s3=$url.$s1."/sendMessage";
 $f1=t1($s3,$d6);
 file_put_contents('f1.txt',$f1);
 
+  $dd2=str_replace(" ","%20",$ur4);
+    
 $p12="https://naserxna2.herokuapp.com/";
 $d8=array();
 $d8['chat_id']=$st1[1];
-$d8['video']='@' . realpath('image/test1.mp4');
+$d8['video']='@' . $dd2;
 $d8['caption']=$tr1;
 $s4=$url.$s1."/sendVideo";
 $d10=sph($s4,$d8,$s);
-*/
+$d11= json_decode($d10,true);
+  
+$d6='chat_id'.'='.$st1[1].'&'.'text'.'='.$d11;
+$s3=$url.$s1."/sendMessage";
+$f1=t1($s3,$d6);
+file_put_contents('f1.txt',$f1);
+
 //file_put_contents('http://xna123.000webhostapp.com/f10.txt',$d10);
 }
 }
